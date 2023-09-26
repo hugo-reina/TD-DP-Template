@@ -11,7 +11,7 @@ public class Personne
     public double poids; /* en kg */
     private char sexe; /* 'M' ou 'F' */
 
-    public Personne() {this("John", "Doe", 175,  76,'m');}
+    public Personne() {this("Napoleon", "Bonaparte", 169,  65.5,'M');}
 
     public Personne(String prénom, String nom, int taille, double poids, char sexe)
     {
