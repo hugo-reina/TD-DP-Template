@@ -1,0 +1,8 @@
+Données pour créer une instance de personne
+exemplesreflexion.cours.Personne
+prénom = Napoléon
+nom = Bonaparte
+taille = 169
+poids = 65.5
+sexe = M
+

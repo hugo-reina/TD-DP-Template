@@ -1,3 +1,4 @@
+package exemplesreflexion.cours;
 public class Point
 {
     private double x,y;

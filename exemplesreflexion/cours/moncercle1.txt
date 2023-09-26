@@ -1,0 +1,4 @@
+Données pour construire un cercle
+exemplesreflexion.cours.Cercle
+rayon = 12.5
+centre = (-23.7, 41.2)

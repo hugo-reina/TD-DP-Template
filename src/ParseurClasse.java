@@ -31,7 +31,7 @@ public class ParseurClasse
 
         while ((ligne = f.readLine()) != null)
         {
-            String [] éléments = ligne.split("=");
+            String[] éléments = ligne.split("=");
             String nomChamp = éléments[0].trim();
             String sValeur = éléments[1].trim();
 

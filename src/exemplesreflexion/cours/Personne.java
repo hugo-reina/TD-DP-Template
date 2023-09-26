@@ -1,3 +1,4 @@
+package exemplesreflexion.cours;
 /**
  * classe créée pour tester les fonctionnalités de la réflexion : c-à-d les propriétés de la classe Class<?>
  *
@@ -11,7 +12,7 @@ public class Personne
     public double poids; /* en kg */
     private char sexe; /* 'M' ou 'F' */
 
-    public Personne() {this("Napoleon", "Bonaparte", 169,  65.5,'M');}
+    public Personne() {this("Napoléon", "Bonaparte", 169,  65.5,'M');}
 
     public Personne(String prénom, String nom, int taille, double poids, char sexe)
     {
