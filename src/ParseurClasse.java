@@ -23,7 +23,7 @@ public class ParseurClasse
 
         Class<?> maClasse = Class.forName(ligne); // on charge la classe à instancier.
         // La variable maClasse la représente
-        Object résultat = maClasse.newInstance(); // on appelle le constructeur par défaut
+        Object resultat = maClasse.newInstance(); // on appelle le constructeur par défaut
         // de la classe chargée
 
 // les lignes suivantes contiennent les valeurs pour les champs à renseigner.
@@ -31,31 +31,33 @@ public class ParseurClasse
 
         while ((ligne = f.readLine()) != null)
         {
-            String[] éléments = ligne.split("=");
-            String nomChamp = éléments[0].trim();
-            String sValeur = éléments[1].trim();
+            String[] elements = ligne.split("=");
+            System.out.println(elements.length);
+            String nomChamp = elements[0].trim();
+            String sValeur = elements[1].trim();
 
-            String nomSetter = créeNomSetter(nomChamp);  // on crée le nom du setter
+            String nomSetter = creeNomSetter(nomChamp);  // on crée le nom du setter
             // associé au champ à renseigner
             if (sValeur.endsWith(".txt"))
             {
+                System.out.println("TXT");
                 Field champ = maClasse.getDeclaredField(nomChamp);
                 Class<?> typeChamp = champ.getType();    // typeChamp représente le type
                 // du champ
 
                 Method setter = maClasse.getMethod(nomSetter, typeChamp);
 
-                setter.invoke(résultat, ParseurClasse.parse(sValeur));  // appel récursif
+                setter.invoke(resultat, ParseurClasse.parse(sValeur));  // appel récursif
                 // puis conversion de Object vers la classe représentée par typeChamp
             }
             else
             {
                 Method setter = maClasse.getMethod(nomSetter, java.lang.String.class);   	// on obtient la méthode setChamp(String) associée au champ à renseigner
-                setter.invoke(résultat, sValeur);                                               	// on appelle le setter et on renseigne donc le champ
+                setter.invoke(resultat, sValeur);                                               	// on appelle le setter et on renseigne donc le champ
             }
         }
         f.close();
-        return résultat;
+        return resultat;
     }	// parse
     /**
      * crée le nom du setter en fonction du nom du champ de la manière suivante :
@@ -66,7 +68,7 @@ public class ParseurClasse
      * @return nomSetter respectant les conventions de nommage
      *
      * */
-    public static String créeNomSetter(String nomChamp)
+    public static String creeNomSetter(String nomChamp)
     {
         char l = nomChamp.charAt(0);
         String nomSetter = "set"+Character.toUpperCase(l)+nomChamp.substring(1);

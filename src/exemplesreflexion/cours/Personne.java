@@ -5,33 +5,33 @@ package exemplesreflexion.cours;
  * */
 public class Personne
 {
-    private String prénom;
+    private String prenom;
     public String nom;
 
     private int taille; /* en cm */
     public double poids; /* en kg */
     private char sexe; /* 'M' ou 'F' */
 
-    public Personne() {this("Napoléon", "Bonaparte", 169,  65.5,'M');}
+    public Personne() {this("Napoleon", "Bonaparte", 169,  65.5,'M');}
 
-    public Personne(String prénom, String nom, int taille, double poids, char sexe)
+    public Personne(String prenom, String nom, int taille, double poids, char sexe)
     {
         super();
-        this.prénom = prénom;
+        this.prenom = prenom;
         this.nom = nom;
         this.taille = taille;
         this.poids = poids;
         this.sexe = Character.toUpperCase(sexe);
     }
 
-    public void setIdentité(String prénom, String nom)
+    public void setIdentite(String prenom, String nom)
     {
-        this.setPrénom(prénom); this.setNom(nom);
+        this.setPrenom(prenom); this.setNom(nom);
     }
 
-    public String getPrénom() {return this.prénom;}
+    public String getPrenom() {return this.prenom;}
 
-    public void setPrénom(String prénom) {this.prénom = prénom;}
+    public void setPrenom(String prenom) {this.prenom = prenom;}
 
     public String getNom() {return this.nom;}
 
@@ -59,7 +59,7 @@ public class Personne
     @Override
     public String toString()
     {
-        return "Personne [prénom=" + this.prénom + ", nom=" + this.nom + ", taille="
+        return "Personne [prenom=" + this.prenom + ", nom=" + this.nom + ", taille="
                 + this.taille + ", poids=" + this.poids + ", sexe=" + this.sexe + "]";
     }
 

@@ -1,4 +1,4 @@
 Données pour créer une instance de Cercle
 exemplesreflexion.cours.Cercle
-rayon = 12.5
-centre = (-23.7, 41.2)
+rayon = 27.8
+centre = monpoint1.txt
